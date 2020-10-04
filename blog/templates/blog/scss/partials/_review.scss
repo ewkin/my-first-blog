@@ -1,0 +1,96 @@
+.review-header {
+    font-family: $secondary-font;
+    font-size: 29px;
+    text-transform: uppercase;
+    margin: 6.6% 0 4.03% 0;
+    text-align: center;
+
+    span {
+        font-size: 21px;
+        margin: 12px 0 0 0;
+        display: block;
+    }
+}
+
+
+.review-holder {
+    margin: 0 -15px;
+    position: relative;
+
+}
+
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review {
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.bg-review {
+    background: #245963;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 63px;
+
+    p {
+        color: #76b2be;
+        line-height: 1.6;
+        margin: 0 30px 35px;
+    }
+
+
+}
+
+.img {
+    margin: 43px 0 32px 0;
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        display: block;
+    }
+
+    a {
+        margin-top: auto;
+    }
+
+}
+
+.review-1 {
+    border-top: 7px solid $red;
+
+    a {
+
+        @include button ($red);
+
+    }
+}
+
+.review-2 {
+    border-top: 7px solid $yellow;
+
+    a {
+
+        @include button ($yellow);
+
+    }
+}
+
+.review-3 {
+    border-top: 7px solid $blue;
+
+    a {
+
+        @include button ($blue);
+
+    }
+}

@@ -1,0 +1,120 @@
+.form {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4.9%;
+    
+}
+
+.form a {
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-top: 106px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 70px;
+
+    h3 {
+        font-size: 29px;
+        font-family: $secondary-font;
+        margin: 40px 0 0 0;
+    }
+
+    .icon-form {
+        @include icons (letter);
+        display: block;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        margin-right: -50%;
+
+        @media screen and (max-width: 900px) {
+            top: 25%;
+        }
+    }
+
+
+
+    &:hover .icon-form {
+        animation: rotate-ic 1s linear infinite;
+    }
+
+    @keyframes rotate-ic {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(365deg);
+        }
+    }
+}
+
+
+.second-txt {
+    margin: 15px 0 0 0;
+    font-size: 21px;
+    display: block;
+}
+
+.form-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px 0 0 0;
+}
+
+.form-row {
+    padding: 0 15px;
+    margin: 15px 0;
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.field {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #387d89;
+    background: $darkblue;
+    padding: 0 0 5px 16px;
+}
+
+.field-text {
+    width: 100%;
+    margin: 13px 0 25px 0;
+
+}
+
+.field-area {
+    width: 100%;
+    border: 1px solid #387d89;
+    background: $darkblue;
+    height: 128px;
+    padding: 14px 0 0 16px;
+
+}
+
+
+
+.field,
+.field-area {
+    @include placeholder {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 14px;
+        color: #76b2be;
+    }
+}
+
+.form-btn {
+    border: none;
+    @include button ($darkblue);
+
+}

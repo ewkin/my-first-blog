@@ -1,0 +1,101 @@
+.main-nav {
+    overflow: hidden;
+    height: 0;
+    transition: height 2s;
+    margin-top: 30px;
+
+    @include tablets {
+        height: auto;
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        display: inline-block;
+
+        @include tablets {
+            margin: 0px 18px 0 5px;
+        }
+    }
+
+    a {
+        display: block;
+        text-align: right;
+        width: 100%;
+        font-family: $secondary-font;
+        padding: 10px 0px;
+        text-decoration: none;
+        font-weight: normal;
+        text-transform: capitalize;
+        font-size: 17px;
+        color: #ffffff;
+
+        &:hover {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        @include phone {
+            padding: 10px 5px 10px 0;
+        }
+
+        @include tablets {
+            padding: 10px 10px 10px 0px;
+        }
+    }
+
+}
+
+.nav-btn:checked+.main-nav {
+    height: 28px;
+}
+
+
+.nav-btn {
+    display: none;
+}
+
+.nav-label {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.navBtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 25px;
+    height: 30px;
+    border-bottom: 2px solid #ffffff;
+
+    &::after {
+        content: "";
+        display: block;
+        top: 7px;
+        left: 0;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #ffffff;
+    }
+
+    &::before {
+        content: "";
+        top: 18px;
+        left: 0;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #ffffff;
+    }
+}

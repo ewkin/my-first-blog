@@ -1,0 +1,91 @@
+.card-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -81px 0 0 0;
+}
+
+.col {
+    @include create-columns;
+}
+.col{
+    @include create-columns-md;
+}
+
+.card {
+    padding-top: 50px;
+    text-align: center;
+
+    a {
+        position: relative;
+        display: block;
+        padding-top: 106px;
+        font-size: 24px;
+        font-family: $secondary-font;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0 70px;
+
+        span {
+            display: block;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            margin-right: -50%;
+        }
+
+        &:hover span {
+            animation: rotate-ic 1s linear infinite;
+        }
+
+        @keyframes rotate-ic {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(365deg);
+            }
+        }
+    }
+
+    h3 {
+        margin: 29px 0 0;
+    }
+
+    p {
+        margin: 8px 4vw 9.8%;
+    }
+}
+
+.card-1 {
+    background: $red;
+
+    span {
+        @include icons (com);
+    }
+}
+
+.card-2 {
+    background: $yellow;
+
+    span {
+        @include icons (pen);
+    }
+}
+
+.card-3 {
+    background: $blue;
+
+    span {
+        @include icons (crown);
+    }
+}
+
+.card-4 {
+    background: $purple;
+
+    span {
+        @include icons (person);
+    }
+}

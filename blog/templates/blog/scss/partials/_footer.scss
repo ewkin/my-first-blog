@@ -1,0 +1,84 @@
+.footer {
+    background: $darkblue;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.social {
+    margin: 0 0 66px 0;
+    position: relative;
+}
+
+.social::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    margin-left: -150px;
+    width: 283px;
+    height: 1px;
+    background: #387d89;
+
+
+}
+
+.fb,
+.tw {
+    margin: 0 9px 0 0;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.3;
+
+
+}
+
+.phone {
+    margin: 0 0 0 15px;
+    font-size: 15px;
+
+}
+
+.contact {
+    display: block;
+    margin-top: 10px;
+
+    @include tablets {
+        display: inline-block;
+
+    }
+}
+
+.email-hidden {
+    margin: 0 17px 0 0;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+
+    @include tablets {
+        display: none;
+
+    }
+}
+
+.email {
+    margin: 0 17px 0 0;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+
+    @include tablets {
+        display: inline-block;
+
+    }
+}
+
+.lower-yellow {
+    color: $yellow;
+}

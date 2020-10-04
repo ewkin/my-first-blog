@@ -1,0 +1,147 @@
+@mixin pic-100 {
+    @media screen and (min-width: 1400px) {
+        @content
+    }
+}
+
+@mixin screen-1200 {
+    @media screen and (min-width: 1200px) {
+        @content
+    }
+}
+
+@mixin screen-900 {
+    @media screen and (min-width: 900px) {
+        @content
+    }
+}
+
+@mixin tablet-plus {
+    @media screen and (min-width: 550px) {
+        @content
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: 450px) {
+        @content
+    }
+}
+
+@mixin icons ($icon) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #ffffff;
+        z-index: 350;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: url(../images/icon-#{$icon}.png) no-repeat 50% 50%;
+        z-index: 500;
+    }
+}
+
+@mixin button ($color) {
+    display: block;
+    width: 102px;
+    height: 36px;
+    position: relative;
+    z-index: 200;
+    background: $color;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: $secondary-font;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    line-height: 2.5;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -4;
+        width: 22px;
+        height: 22px;
+        background: $color;
+
+        transform: rotate(45deg);
+        bottom: -6px;
+        left: 40%;
+
+    }
+
+}
+
+
+
+@mixin phone {
+    @media screen and (min-width: 350px) {
+        @content
+    }
+}
+
+@mixin create-columns {
+    @for $i from 1 through 12 {
+        $width-col: percentage(1/$i);
+
+        &-#{$i} {
+            @include tablet-plus {
+                width: $width-col;
+            }
+        }
+    }
+}
+
+@mixin create-columns-md {
+    @for $i from 1 through 12 {
+        $width-col: percentage(1/$i);
+
+        &-md-#{$i} {
+            @include screen-900 {
+                width: $width-col;
+            }
+        }
+    }
+}
+
+@mixin placeholder {
+
+    &::-webkit-input-placeholder {
+        @content
+    }
+
+    &::-ms-input-placeholder {
+        @content
+    }
+
+    &::-ms-input-placeholder {
+        @content
+    }
+
+    &::-moz-placeholder {
+        @content
+    }
+
+    &::placeholder {
+        @content
+    }
+}
